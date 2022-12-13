@@ -3,7 +3,13 @@
 #include <stdio.h>
 /* more headers goes there */
 
-/* betty style doc for function main goes there */
+/**
+ *main - returns a value and a description
+ * betty style doc for function main goes there
+ *
+ * Return: Always 0.
+*/
+
 int main(void)
 {
 int n;
