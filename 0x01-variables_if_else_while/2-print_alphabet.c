@@ -3,18 +3,20 @@
 /**
  * main - Entry point
  *
- * Return: Always 0 (Success)
+ * Return: 0
  */
-int main(void)
-{
-int ch;
 /* print lowercase letters */
-for (ch = "a"; ch <= "z"; ch++)
+int main(void)
+
 {
-putchar(ch);
-}
+/* print lowercase letters */
+char beta;
+beta = 'a';
+while (beta <= 'z')
 {
-putchar ("\n");
+putchar(beta);
+beta++;
 }
+putchar('\n');
 return (0);
 }
