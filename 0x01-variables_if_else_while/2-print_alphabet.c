@@ -5,7 +5,7 @@
  *
  * Return: 0
  */
-/* print lowercase letters */
+
 int main(void)
 
 {
