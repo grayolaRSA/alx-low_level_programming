@@ -1,41 +1,40 @@
 #include "main.h"
-#include <stdio.h>
-/**
- *times_table - function prototype
- */
-void times_table(void);
 
 /**
- * main - produces results of nine times table
+ * times_table - function that gives the tables
  *
- * Return: Always int.
+ * Return: Always 0.
  */
-int main(void)
-
-{
-	int i;
-
-	for (i = 0; i < 10; i++)
-	{
-		int j;
-
-
-		for (j = 0; j < 10; j++)
-		{
-			int m;
-
-			m = i * j;
-
-				printf("%d   ", m);
-		}
-		printf("\n");
-	}
-	return (0);
-}
 
 void times_table(void)
-
 {
+	int i;
+	int j;
+	int m;
 
-	printf("Sing hallelujah");
+	for (i = 0; i <= 9; i++)
+	{
+		for (j = 0; j <= 9; j++)
+		{
+			m = i * j;
+			if (m <= 9)
+			{
+				if ((m != 0) || (j != 0))
+				{
+					_putchar(' ');
+				}
+				_putchar('0' + m);
+			} else
+			{
+				_putchar('0' + (m / 10));
+				_putchar('0' + (m % 10));
+			}
+			if (j != 9)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
+		}
+		_putchar('\n');
+	}
 }
