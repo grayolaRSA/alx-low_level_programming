@@ -26,7 +26,7 @@ int main(void)
 
 			m = i * j;
 
-				printf("%d ", m);
+				printf("%d   ", m);
 		}
 		printf("\n");
 	}
