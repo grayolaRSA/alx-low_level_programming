@@ -1,9 +1,9 @@
 #include "main.h"
-int _isalpha(int c);
+
 
 /**
  *_isalpha - checks whether its a letter
- * uppercase or lowercase
+ * @c: description - parameter or member uppercase or lowercase
  * Return: 0 or 1
 */
 
