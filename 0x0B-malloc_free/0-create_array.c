@@ -15,7 +15,7 @@ char *init;
 if (size <= 0)
 return (NULL);
 
-init  = malloc(size);
+init  = malloc(size * sizeof(char));
 
 if (init == NULL)
 return (NULL);
