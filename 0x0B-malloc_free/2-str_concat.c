@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <string.h>
 
 /**
 *str_concat - concatenates two strings
@@ -27,8 +28,8 @@ s2 = "";
 }
 
 {
-len1 = _strlen(s1);
-len2 = _strlen(s2);
+len1 = strlen(s1);
+len2 = strlen(s2);
 s = malloc((len1 + len2 + 1) * sizeof(char));
 }
 printf("the address of the new memory is %p\n", (void *)s);
