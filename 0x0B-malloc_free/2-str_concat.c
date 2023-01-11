@@ -13,13 +13,13 @@ char *s;
 unsigned int y, i, j, k;
 
 if (s1 == NULL)
-i = 0;
+return ("");
 for (i = 0; s1[i] != '\0'; i++)
 	;
 
 
 if (s2 == NULL)
-k = 0;
+return ("");
 for (k = 0; s2[k] != '\0'; k++)
 	;
 
