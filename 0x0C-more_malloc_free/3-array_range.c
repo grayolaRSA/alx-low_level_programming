@@ -16,14 +16,13 @@ int i, j;
 if (max < min)
 return (NULL);
 
-for (i = 0; i <= max && i >= min; i++)
-	;
+i = max - min + 1;
 
-s = malloc((i * (sizeof(int))) + 1);
+s = malloc(i * (sizeof(int)));
 if (s == NULL)
 return (NULL);
 
-for (j = 0; j <= max; j++, min++)
+for (j = 0; j < i; j++, min++)
 s[j] = min;
 
 return (s);
