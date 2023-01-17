@@ -1,7 +1,7 @@
-#ifndef _FILE_NAME_H_
-#define _FILE_NAME_H_
+#ifndef MAIN_H
+#define MAIN_H
 #include <stdlib.h>
 
-#define ABS(x) abs(x)
+#define ABS(x) ((x < 0) ? (-x) : (x))
 
 #endif
