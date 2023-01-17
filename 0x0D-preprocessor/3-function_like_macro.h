@@ -1,6 +1,5 @@
-#ifndef MAIN_H
-#define MAIN_H
-#include <stdlib.h>
+#ifndef _FILE_NAME_H_
+#define _FILE_NAME_H_
 
 #define ABS(x) ((x < 0) ? (-x) : (x))
 
