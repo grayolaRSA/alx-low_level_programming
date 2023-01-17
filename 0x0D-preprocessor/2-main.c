@@ -1,11 +1,11 @@
-#ifndef _FILE_NAME_H_
-#define _FILE_NAME_H_
+#ifndef MAIN_H
+#define MAIN_H
 #include <stdio.h>
 
 /**
 *main - prints file name
 *__FILE__: file name macro
-*return: always 0
+*Return: always 0
 */
 
 int main(void)
