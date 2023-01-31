@@ -27,5 +27,6 @@ void free_list(list_t *head);
 int _putchar(char c);
 int _printf(const char *format, ...);
 int _puts(char *s);
+int _strlen(const char *s);
 
 #endif
