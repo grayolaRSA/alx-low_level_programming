@@ -10,7 +10,7 @@
  * Description: dog owner repository structure
  */
 
-struct dog
+typedef struct dog
 {
 	char *name;
 	float age;
