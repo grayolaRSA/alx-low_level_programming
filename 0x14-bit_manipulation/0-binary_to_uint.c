@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
+#include <limits.h>
 #include <string.h>
 
 /**
@@ -22,8 +22,11 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if (b[i] != '0' && b[i] != '1')
 			return (0);
-		result += (b[i] - '0') * pow(2, strlen(b) - i - 1);
+		result = (result * 2) + (b[i] - '0');
+		if (result > UINT_MAX)
+			return (0);
 		i++;
 	}
+
 	return (result);
 }
