@@ -36,3 +36,15 @@ dog_t *new_dog(char *name, float age, char *owner)
 	return (d);
 
 }
+/**
+ *free_dog - frees all memory
+ *@d: struct to be freed
+ *Return: void
+ */
+
+void free_dog(struct dog *d)
+{
+	free(d->name);
+	free(d->owner);
+	free(d);
+}
