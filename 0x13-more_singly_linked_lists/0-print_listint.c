@@ -1,8 +1,7 @@
 #include "lists.h"
-#include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
+
 
 /**
  * print_listint  - prints singly linked list
@@ -16,7 +15,7 @@ size_t print_listint(const listint_t *h)
 
 	while (h)
 	{
-		printf("[%d] \n", h->n);
+		printf("%d \n", h->n);
 		h = h->next;
 		count++;
 	}
