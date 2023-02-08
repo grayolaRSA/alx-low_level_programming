@@ -17,12 +17,11 @@ void free_listint2(listint_t **head)
 		return;
 	}
 
-	temp = (*head)->next;
+	temp = (*head);
 	while (temp != NULL)
 	{
 		temp2 = temp->next;
 		free(temp);
 		temp = temp2;
 	}
-	free(head);
 }
