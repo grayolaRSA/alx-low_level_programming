@@ -1,20 +1,24 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
 *main - prints number of arguments
 *@argc: number of arguments
-*@argv: string characters
+*@argv: strings of arguments
 *Return: always zero
 */
 
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-while (**argv != '\0')
+int i;
 
+for (i = 0; i < argc; i++)
 {
-_putchar(argc);
+if (argv[i] == NULL)
+break;
 }
-_putchar('\n');
-
+{
+printf("%d\n", argc - 1);
+}
 return (0);
 }
