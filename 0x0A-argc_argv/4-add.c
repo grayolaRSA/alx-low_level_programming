@@ -16,18 +16,19 @@ int i = 0, j = 0, add = 0;
 if (argc < 2)
 {
 printf("0\n");
+return (1);
 }
 
 
 for (i = 1; i < argc; i++)
 {
-if (*argv[i] < 48 || *argv[i] > 57)
+j = atoi(argv[i]);
+if (!j)
 {
 printf("Error\n");
 return (1);
 }
 
-j = atoi(argv[i]);
 add += j;
 }
 
