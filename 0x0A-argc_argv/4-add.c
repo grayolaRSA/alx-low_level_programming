@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
 *main - prints number of arguments
@@ -16,6 +17,7 @@ int i = 0, j = 0, add = 0;
 if (argc == 1)
 {
 printf("0\n");
+return (0);
 }
 
 
