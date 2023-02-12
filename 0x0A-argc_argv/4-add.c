@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <errno.h>
 
 /**
 *main - prints number of arguments
@@ -13,6 +14,7 @@
 int main(int argc, char *argv[])
 {
 int i = 0, j = 0, add = 0;
+char *endptr;
 
 if (argc == 1)
 {
@@ -23,8 +25,9 @@ return (0);
 
 for (i = 1; i < argc; i++)
 {
-j = atoi(argv[i]);
-if (!j)
+errno = 0;
+j = strtol(argv[i], &endptr, 10);
+if (errno == ERANGE || *endptr != '\0')
 {
 printf("Error\n");
 return (1);
