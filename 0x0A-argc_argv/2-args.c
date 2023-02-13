@@ -15,10 +15,13 @@ int i;
 for (i = 0; i < argc; i++)
 {
 if (argv[i] == NULL)
+{
 break;
 }
+else
 {
-printf("%d\n", argc - 1);
+printf("%s\n", argv[i]);
+}
 }
 return (0);
 }
