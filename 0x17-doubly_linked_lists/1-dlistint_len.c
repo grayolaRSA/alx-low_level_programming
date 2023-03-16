@@ -9,18 +9,11 @@
 
 size_t dlistint_len(const dlistint_t *h)
 {
-	int c = 0;
+	size_t i;
 
-	if (h == NULL)
-	{
-		printf("No elements in this list\n");
-		return (0);
-	}
-
-	while (h != NULL)
+	for (i = 0; h != NULL; i++)
 	{
 		h = h->next;
-		c++;
 	}
-	return (c);
+	return (i);
 }
