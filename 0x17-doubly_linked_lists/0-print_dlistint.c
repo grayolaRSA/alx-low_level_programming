@@ -10,12 +10,6 @@
 size_t print_dlistint(const dlistint_t *h)
 {
 	int size_t = 0;
-
-	if (h == NULL)
-	{
-		printf("No elements in this list\n");
-	}
-
 	while (h != NULL)
 	{
 		printf("%d\n", h->n);
