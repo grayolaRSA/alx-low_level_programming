@@ -13,17 +13,18 @@
 
 hash_node_t *add_hash_n(hash_node_t **head, const char *key, const char *value)
 {
-	hash_node_t *node;
+	hash_node_t *node = malloc(sizeof(hash_node_t));
 
-	node = malloc(sizeof(hash_node_t));
 	if (node == NULL)
 		return (NULL);
+
 	node->key = strdup(key);
 	if (node->key == NULL)
 	{
 		free(node);
 		return (NULL);
 	}
+
 	node->value = strdup(value);
 	if (node->value == NULL)
 	{
@@ -31,8 +32,17 @@ hash_node_t *add_hash_n(hash_node_t **head, const char *key, const char *value)
 		free(node);
 		return (NULL);
 	}
+
+	if (*head == NULL)
+	{
+		*head = node;
+		node->next = NULL;
+	}
+	else
+	{
 	node->next = *head;
 	*head = node;
+	}
 
 	return (node);
 }
@@ -48,13 +58,29 @@ hash_node_t *add_hash_n(hash_node_t **head, const char *key, const char *value)
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
+	hash_node_t *node;
 
 	if (ht == NULL || key == NULL || *key == '\0')
 		return (0);
 
 	index = key_index((const unsigned char *)key, ht->size);
 
-	if (add_hash_n(&(ht->array[index]), key, value) == NULL)
+	node = ht->array[index];
+	while (node != NULL)
+	{
+		if (strcmp(node->key, key) == 0)
+		{
+			free(node->value);
+			node->value = strdup(value);
+			if (node->value == NULL)
+				return (0);
+			return (1);
+		}
+		node = node->next;
+	}
+
+	node = add_hash_n(&(ht->array[index]), key, value);
+	if (node == NULL)
 		return (0);
 
 	return (1);
