@@ -6,7 +6,7 @@ NAME=school
 CFLAGS=
 
 all: m.h $(OBJ)
-	$(CC) -Wall -Werror -Wextra -pedantic \
+	gcc -Wall -Werror -Wextra -pedantic \
 $(CFLAGS) $(OBJ) -o $(NAME)
 
 clean:
